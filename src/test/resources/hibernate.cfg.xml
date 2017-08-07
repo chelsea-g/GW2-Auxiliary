@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<!-- CONFIG FOR TEST DATABASE -->
+    <!-- CONFIG FOR TEST DATABASE -->
+        <!-- CONFIG FOR TEST DATABASE -->
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/TEST_gw2_auxiliary</property>
+        <property name="connection.username">root</property>
+        <!-- TODO: make this more secure -->
+        <property name="connection.password">f40g5rR*soqool</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+        <!-- List the annotated entity class/es -->
+        <mapping class="com.cgreger.entity.db.User"/>
+        <mapping class="com.cgreger.entity.db.APIKey"/>
+        <mapping class="com.cgreger.entity.db.TrackedItem"/>
+        <mapping class="com.cgreger.entity.db.UserRole"/>
+        <mapping class="com.cgreger.entity.db.DBItem"/>
+    </session-factory>
+
+        <!-- CONFIG FOR TEST DATABASE -->
+    <!-- CONFIG FOR TEST DATABASE -->
+<!-- CONFIG FOR TEST DATABASE -->
+
+</hibernate-configuration>
